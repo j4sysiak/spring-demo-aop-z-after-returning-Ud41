@@ -42,8 +42,17 @@ public class MyDemoLoggingAspect {
 	}
 	
 	private void convertAccountNamesToUpperCase(List<Account> result) {
-		// TODO Auto-generated method stub
-		
+
+		// loop through accounts
+		for (Account tempAccount : result) {
+			
+			// get uppercase version of name
+			String theUpperName = tempAccount.getName().toUpperCase();
+			
+			// update the name on the account
+			tempAccount.setName(theUpperName);
+		}
+
 	}
 
 
